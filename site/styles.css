@@ -1,0 +1,868 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    background-size: cover; /* Scale the background image to cover the entire viewport */
+    background-attachment: fixed; /* Make the background fixed */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/* Header styles */
+#hero-image_data {
+    max-width: 460px; /* Adjust the maximum width as needed */
+    max-height: 328px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 50px; /* Adjust the top position in pixels as needed */
+    left: 180px; /* Adjust the left position in pixels as needed */
+}
+#hero-image_heron {
+    max-width: 150px; /* Adjust the maximum width as needed */
+    max-height: 150px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 50px; /* Adjust the top position in pixels as needed */
+    left: 10px; /* Adjust the left position in pixels as needed */
+}
+#hero-image_eat {
+    max-width: 380px; /* Adjust the maximum width as needed */
+    max-height: 380px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 120px; /* Adjust the top position in pixels as needed */
+    left: 170px; /* Adjust the left position in pixels as needed */
+}
+#hero-image_report {
+    max-width: 310px; /* Adjust the maximum width as needed */
+    max-height: 310px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 310px; /* Adjust the top position in pixels as needed */
+    left: 810px; /* Adjust the left position in pixels as needed */
+}
+#hero-image_scroll {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 700px; /* Adjust the top position in pixels as needed */
+    left: 660px;
+}
+#centered-button {
+    position: absolute;
+    top: 500px; /* Adjust the top position in pixels as needed */
+    left: 430px;
+    background-color: black;
+    padding: 35px 250px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#centered-button a {
+    text-decoration: none;
+    display: block;
+}
+
+#centered-button span {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#centered-button:hover {
+    background-color: rgb(255, 0, 98);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Set the background color to transparent */
+}
+
+/* styles.css */
+.nav-links {
+    list-style: none;
+    display: flex;
+    background: transparent; /* Remove the background */
+    padding: 0; /* Remove padding */
+    font-size: 20px;
+}
+
+.nav-links li {
+    margin-right: 15px;
+    background-color: transparent;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: red; /* Set the initial text color to red */
+    transition: color 0.3s;
+    background-color: transparent;
+}
+
+.nav-links a:hover {
+    color: #ff5733; /* New color on hover */
+    background-color: transparent;
+}
+
+/* Hero section styles */
+#hero {
+    background-image: linear-gradient(to bottom, #ffffff, #ff88b8), url('bg4.png'); /* Create a gradient transition with the hero section color */
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    height: 100vh;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    top: 1px;
+    right: 3px;
+}
+
+
+
+.hero-content{
+    font-size: 50px; /* Text size */
+    position: absolute; /* Position the text absolutely within the relative section */
+    top: 20px; /* Align text to the top */
+    left: 30px; /* Align text to the right */
+}
+
+#about {
+    background-image: linear-gradient(to bottom, #ff88b8, #ff0066), url('im_bg.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 150vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+#about-image_heron1 {
+    max-width: 450px; /* Adjust the maximum width as needed */
+    max-height: 450px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 900px; /* Adjust the top position in pixels as needed */
+    left: 11px;
+}
+#about-image_container {
+    max-width: 700px; /* Adjust the maximum width as needed */
+    max-height: 700px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 1025px; /* Adjust the top position in pixels as needed */
+    left: 460px;
+}
+#about-image_container_us {
+    max-width: 570px; /* Adjust the maximum width as needed */
+    max-height: 570px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 1170px; /* Adjust the top position in pixels as needed */
+    left: 550px;
+}
+#about-image_heron_down {
+    max-width: 350px; /* Adjust the maximum width as needed */
+    max-height: 530px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 1340px; /* Adjust the top position in pixels as needed */
+    left: 1100px;
+}
+#about-image_report_text {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 1450px; /* Adjust the top position in pixels as needed */
+    left: 100px;
+}
+#about-image_report_text2 {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    max-height: 500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 1450px; /* Adjust the top position in pixels as needed */
+    left: 510px;
+}
+
+.about-content{
+    font-size: 90px; /* Text size */
+    position: absolute; /* Position the text absolutely within the relative section */
+    top: 1075px; /* Align text to the top */
+    left: 665px; /* Align text to the right */
+    font-family:Arial, Helvetica, sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@display=swap');
+*
+.about-content_about {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    top: 1170px;
+    left: 515px;
+}
+#about-image_report {
+    max-width: 350px; /* Adjust the maximum width as needed */
+    max-height: 530px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 1340px; /* Adjust the top position in pixels as needed */
+    left: 1100px;
+}
+
+
+/* Services section styles */
+#services {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('bg2.png'); /* Set your background image with a semi-transparent white overlay */
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 250vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Change text color to a darker color to contrast with the lighter background */
+}
+
+#services_why {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 2100px; /* Adjust the top position in pixels as needed */
+    left: 30px;
+}
+#services_info {
+    max-width: 1300px; /* Adjust the maximum width as needed */
+    max-height: 1300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 2350px; /* Adjust the top position in pixels as needed */
+    left: 50px;
+}
+
+#services_wind {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 230px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 2950px; /* Adjust the top position in pixels as needed */
+    left: 930px;
+}
+#services_time {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    max-height: 600px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 2950px; /* Adjust the top position in pixels as needed */
+    left: 60px;
+}
+#services_heron_flight {
+    max-width: 290px; /* Adjust the maximum width as needed */
+    max-height: 290px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 2925px; /* Adjust the top position in pixels as needed */
+    left: 840px;
+}
+#services_fast {
+    max-width: 350px; /* Adjust the maximum width as needed */
+    max-height: 350px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 3300px; /* Adjust the top position in pixels as needed */
+    left: 100px;
+}
+#services_fast2 {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    max-height: 500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 3300px; /* Adjust the top position in pixels as needed */
+    left: 700px;
+}
+#services_stripe {
+    max-width: 24px; /* Adjust the maximum width as needed */
+    max-height: 340px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 3270px; /* Adjust the top position in pixels as needed */
+    left: 630px;
+}
+#services_create {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    max-height: 600px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 3580px; /* Adjust the top position in pixels as needed */
+    left: 16px;
+}
+#services_create2 {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    max-height: 500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 3560px; /* Adjust the top position in pixels as needed */
+    left: 700px;
+}
+.services-list li {
+    flex: 1;
+    background-color: transparent;
+    padding: 20px;
+    margin: 10px;
+    top: 100px;
+    left: 10px;
+}
+
+/* Report section styles */
+#report {
+    background-image: linear-gradient(to bottom, #e02db0, #ff0066), url('im_bg.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 300vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+#report_report {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    max-height: 800px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 4000px; /* Adjust the top position in pixels as needed */
+    left: 70px;
+}
+#report_advanced {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 4250px; /* Adjust the top position in pixels as needed */
+    left: 400px;
+}
+#report_book {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 4400px; /* Adjust the top position in pixels as needed */
+    left: 400px;
+}
+#report_her1 {
+    transform: scaleX(-1);
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 4400px; /* Adjust the top position in pixels as needed */
+    left: 20px;
+}
+#report_her2 {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 4400px; /* Adjust the top position in pixels as needed */
+    left: 720px;
+}
+#report_purchase {
+    max-width: 255px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5140px; /* Adjust the top position in pixels as needed */
+    left: 200px;
+}
+#report_arrows {
+    max-width: 1000px; /* Adjust the maximum width as needed */
+    max-height: 1000px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5060px; /* Adjust the top position in pixels as needed */
+    left: 100px;
+}
+#report_car {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5410px; /* Adjust the top position in pixels as needed */
+    left: 100px;
+}
+#report_bottle {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5330px; /* Adjust the top position in pixels as needed */
+    left: 1200px;
+}
+#report_legs {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    max-height: 500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5410px; /* Adjust the top position in pixels as needed */
+    left: 600px;
+}
+#report_car_text {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5680px; /* Adjust the top position in pixels as needed */
+    left: 100px;
+}
+#report_legs_text {
+    max-width: 500px; /* Adjust the maximum width as needed */
+    max-height: 500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5750px; /* Adjust the top position in pixels as needed */
+    left: 600px;
+}
+#report_bottle_text {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 5690px; /* Adjust the top position in pixels as needed */
+    left: 1200px;
+}
+
+#stages {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('bg2.png'); /* Set your background image with a semi-transparent white overlay */
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 230vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Change text color to a darker color to contrast with the lighter background */
+}
+#stages_png {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    max-height: 600px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 6060px; /* Adjust the top position in pixels as needed */
+    left:70px;
+}
+#stages_text_1 {
+    max-width: 1700px; /* Adjust the maximum width as needed */
+    max-height: 1400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 6360px; /* Adjust the top position in pixels as needed */
+    left:2px;
+}
+#stages_text_2 {
+    max-width: 1700px; /* Adjust the maximum width as needed */
+    max-height: 1400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 6760px; /* Adjust the top position in pixels as needed */
+    left:2px;
+}
+#stages_text_3 {
+    max-width: 1700px; /* Adjust the maximum width as needed */
+    max-height: 1400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 7160px; /* Adjust the top position in pixels as needed */
+    left:2px;
+}
+#clients {
+    background-image: linear-gradient(to bottom, #e02db0, #ff0066), url('im_bg.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 280vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+#our_clients {
+    max-width: 700px; /* Adjust the maximum width as needed */
+    max-height: 700px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 7700px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#clients_satisfied {
+    max-width: 350px; /* Adjust the maximum width as needed */
+    max-height: 350px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 7810px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#client_cdots {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 7870px; /* Adjust the top position in pixels as needed */
+    left:140px;
+}
+#client_vok {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8100px; /* Adjust the top position in pixels as needed */
+    left:140px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+
+}
+#client_breffi {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 7870px; /* Adjust the top position in pixels as needed */
+    left:600px;
+}
+#client_cors {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8100px; /* Adjust the top position in pixels as needed */
+    left:600px;
+}
+#client_nais {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 7870px; /* Adjust the top position in pixels as needed */
+    left:1000px;
+}
+#client_ord {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8100px; /* Adjust the top position in pixels as needed */
+    left:1000px;
+}
+#client_w2w {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8200px; /* Adjust the top position in pixels as needed */
+    left:1000px;
+}
+#client_stroy {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8330px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#client_uni {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8350px; /* Adjust the top position in pixels as needed */
+    left:450px;
+}
+#client_center {
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 8400px;
+    left: 900px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+#client_ast {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8500px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#client_mg {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8500px; /* Adjust the top position in pixels as needed */
+    left:900px;
+}
+#client_rus {
+    max-width: 300px; /* Adjust the maximum width as needed */
+    max-height: 300px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8550px; /* Adjust the top position in pixels as needed */
+    left:500px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+#client_ots {
+    max-width: 430px; /* Adjust the maximum width as needed */
+    max-height: 430px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 8960px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#client_customers {
+    max-width: 1500px; /* Adjust the maximum width as needed */
+    max-height: 1500px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 9070px; /* Adjust the top position in pixels as needed */
+    left:8px;
+}
+
+
+/* Contact section styles */
+#contact {
+    background-image: linear-gradient(to bottom, #ff0066, #ffffff), url('im_bg.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center center;
+    height: 130vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+#contact_resp {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 9700px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#contact_gif {
+    max-width: 550px; /* Adjust the maximum width as needed */
+    max-height: 700px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 9760px; /* Adjust the top position in pixels as needed */
+    left:900px;
+}
+#contact_fcont {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: 100%; /* Ensure the image width scales with its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    position: absolute; /* Position the image absolutely within the hero section */
+    top: 10100px; /* Adjust the top position in pixels as needed */
+    left:100px;
+}
+#contact_datat {
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 10400px;
+    left: 100px;
+    filter: brightness(0%);
+}
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea {
+    margin: 10px 0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Apply smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add a smooth transition to anchor links for a navigation effect */
+  nav ul li a {
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ff5733; /* Change to your preferred hover color */
+  }
+  
+  /* Apply smooth transitions for section headers */
+  h2, h3 {
+    transition: color 0.3s ease;
+  }
+  
+  h2:hover, h3:hover {
+    color: #ff5733; /* Change to your preferred hover color */
+  }
+  
+  /* Add a fade-in animation to the hero section content */
+  #hero .hero-content {
+    animation: fade-in 1s ease;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Add a subtle hover effect to buttons */
+  .btn {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff5733; /* Change to your preferred hover background color */
+    color: white; /* Change to your preferred hover text color */
+  }
+  /* Style the link to be blue, increase the font size, and add hover animations */
+#about p:nth-child(2) a {
+    color: blue; /* Set the link color to blue */
+    font-size: 20px; /* Set the font size to make it big */
+    transition: color 0.3s, transform 0.3s; /* Add smooth transitions */
+  }
+  
+  /* Apply hover animations */
+  #about p:nth-child(2) a:hover {
+    color: #0078d4; /* Change link color on hover (lighter blue) */
+    transform: scale(1.1); /* Scale the link on hover */
+  }
+  #custom-icon {
+    position: absolute;
+    top: 100px; /* Adjust the top position in pixels as needed */
+    left: 10px; /* Adjust the left position in pixels as needed */
+    width: 160px; /* Set the width of the icon */
+    height: 160px; /* Set the height of the icon */
+    z-index: 1; /* Ensure the icon is above other content */
+}
+/* styles.css */
+/* Your existing styles for .image-to-appear remain the same */
+
+/* Additional style for service item list */
+.services-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-item {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}

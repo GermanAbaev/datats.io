@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Input Fields</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #input-fields {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .code-label {
+            margin-right: 10px;
+        }
+
+        .code-input {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .code-input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px #007bff;
+        }
+
+        .remove-field {
+            cursor: pointer;
+            color: #ff0000;
+            font-weight: bold;
+        }
+        .chartBox {
+            width: 700px;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Введите ИНН вашего конкурента</h1>
+
+
+    <div id="input-fields">
+        <div class="input-group">
+            <span class="code-label">Конкурент #1</span>
+            <input type="text" class="code-input" placeholder="Enter code">
+            <button class="remove-field">Remove</button>
+        </div>
+        <div class="input-group">
+            <span class="code-label">Конкурент #2</span>
+            <input type="text" class="code-input" placeholder="Enter code">
+            <button class="remove-field">Remove</button>
+        </div>
+    </div>
+
+    <p>добавить конкурента</p>
+    <button id="add-field">+</button>
+    <button id="fetch-data">Fetch Data</button>
+
+    <div id="result"></div>
+
+    <!-- Create a container for the charts -->
+    <div class="chartBox" id="charts-container"></div>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+    <h1>Введите web-сайты ваших конкурентов</h1>
+    <input type="text" id="website-input" placeholder="Enter a website URL">
+    <button id="fetch-website-data">Fetch Data</button>
+    <div id="website-data">
+        <!-- Results will be displayed here -->
+    </div>
+    <div id="dynamic-fields">
+        <button id="add-field2">+</button>
+    </div>
+    <h1>Проверка ваших web-сайтов в соответствии с <a href="https://www.similarweb.com/ru/">API ответом от similarweb</a></h1>
+    <button id="download-html" style="position: absolute; right: 20px; bottom: 20px;">Download PDF</button>
+
+    <script src="script_api_zachb.js"></script>
+    <script src="script_api_pr_2.js"></script>
+    <script>
+        // Function to download the HTML content
+        function downloadHtml() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+    
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'downloaded_page.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    
+        // Add a click event listener to the download button
+        document.getElementById('download-html').addEventListener('click', downloadHtml);
+    </script>
+</body>
+</html>

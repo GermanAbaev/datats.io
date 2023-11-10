@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <style>
+        .chart-container {
+            margin-bottom: 100px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="input-fields">
+        <!-- Input fields will be added dynamically -->
+    </div>
+    <button id="add-field">Add Field</button>
+    <button id="generate-graph">Generate Graph</button>
+    <button id="change-background">Change Background Color</button>
+    <div id="result"></div>
+    <div id="charts-container">
+        <div id="comparative-chart"></div>
+        <div id="chistayaPribil-chart"></div>
+        <div id="ustavnoiKapital-chart" class="chart-container"></div>
+    </div>
+
+    <script src="bri.js"></script>
+    <script>
+        document.getElementById("change-background").addEventListener("click", function() {
+            var color = prompt("Enter a color (e.g., #ffcc00 or blue):");
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+</html>

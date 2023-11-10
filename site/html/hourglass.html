@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Fetch</title>
+    <!-- Include AmCharts libraries -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+<body>
+    <div id="input-fields">
+        <div class="input-group">
+            <span class="code-label">Конкурент #1</span>
+            <input type="text" class="code-input" placeholder="Enter code">
+            <button class="remove-field">Remove</button>
+        </div>
+    </div>
+    <button id="add-field">Add Field</button>
+    <button id="generate-graph">Generate 3D Pie Chart</button>
+    <div id="result"></div>
+    <div id="charts-container"></div>
+    <div id="bounce-rate-chart"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputFieldsContainer = document.getElementById('input-fields');
+            const addFieldButton = document.getElementById('add-field');
+            const generateGraphButton = document.getElementById('generate-graph');
+            const resultDiv = document.getElementById('result');
+            const chartsContainer = document.getElementById('charts-container');
+            const maxFields = 3;
+            let currentFieldNumber = 1; // Start with 1 field
+
+            addFieldButton.addEventListener('click', () => {
+                if (currentFieldNumber < maxFields) {
+                    currentFieldNumber++;
+                    const field = document.createElement('div');
+                    field.className = 'input-group';
+                    field.innerHTML = `
+                        <span class="code-label">Конкурент #${currentFieldNumber}</span>
+                        <input type="text" class="code-input" placeholder="Enter code">
+                        <button class="remove-field">Remove</button>
+                    `;
+                    inputFieldsContainer.appendChild(field);
+                } else {
+                    alert("You've reached the maximum input of 3 fields.");
+                }
+            });
+
+            inputFieldsContainer.addEventListener('click', (event) => {
+                if (event.target.classList.contains('remove-field')) {
+                    event.target.parentElement.remove();
+                    currentFieldNumber--;
+
+                    const codeLabels = document.querySelectorAll('.code-label');
+                    for (let i = 0; i < codeLabels.length; i++) {
+                        codeLabels[i].textContent = `Конкурент #${i + 1}`;
+                    }
+                }
+            });
+            
+            generateGraphButton.addEventListener('click', async () => {
+                const codeInputs = document.querySelectorAll('.code-input');
+                const requestData = [];
+            
+                for (const input of codeInputs) {
+                    const code = input.value.trim();
+                    if (code) {
+                        requestData.push(fetchData(code));
+                    }
+                }
+            
+                // Wait for all the API requests to complete.
+                const responseData = await Promise.all(requestData);
+            
+                // Process and display the bounceRate data as a 3D pie chart.
+                resultDiv.innerHTML = ''; // Clear previous results
+
+                // Create a 3D pie chart using AmCharts
+                const chart = am4core.create("bounce-rate-chart", am4charts.PieChart3D);
+                chart.data = [];
+
+                // Define an array of colors
+                const colors = ["#F98A3D", "#3DA0F9", "#F93D3D"];
+
+                for (let i = 0; i < responseData.length; i++) {
+                    const data = JSON.parse(responseData[i]);
+            
+                    // Check if the data contains 'bounceRate'.
+                    if (data && data['bounceRate'] && data['bounceRate']['bounceRate']) {
+                        const companyBounceRate = data['bounceRate']['bounceRate'];
+
+                        // Add data for the current company to the chart with different colors
+                        chart.data.push({
+                            "company": `Company #${i + 1}`,
+                            "bounceRate": companyBounceRate,
+                            "color": colors[i],
+                        });
+                    } else {
+                        resultDiv.innerHTML = 'Error: Data for some companies is missing the bounceRate.';
+                        break; // Exit the loop on error
+                    }
+                }
+
+                // Configure the 3D pie chart
+                const pieSeries = chart.series.push(new am4charts.PieSeries3D());
+                pieSeries.dataFields.value = "bounceRate";
+                pieSeries.dataFields.category = "company";
+                pieSeries.slices.template.propertyFields.fill = "color";
+                pieSeries.slices.template.stroke = am4core.color("#fff");
+                pieSeries.slices.template.strokeWidth = 2;
+
+                chart.legend = new am4charts.Legend();
+                chart.legend.position = "right";
+                chart.legend.maxHeight = 200;
+
+                chart.exporting.menu = new am4core.ExportMenu();
+                chart.exporting.menu.align = "right";
+                chart.exporting.menu.verticalAlign = "top";
+
+                // Add an animation to the chart
+                pieSeries.hiddenState.properties.scale = 0.9;
+                pieSeries.hiddenState.properties.angle = 90;
+                pieSeries.labels.template.text = "{category}: {value.percent.formatNumber('#.0')}%";
+            });
+
+            async function fetchData(code) {
+                try {
+                    const apiKey = 'qN1lIM25NM1lySkVNRTMzd2Y2by9aST0';
+                    const apiUrl = `https://apis.pr-cy.ru/api/v1.1.0/analysis/base/${code}?key=qN1lIM25NM1lySkVNRTMzd2Y2by9aST0`;
+                    const response = await fetch(apiUrl);
+                    if (response.ok) {
+                        const data = await response.json();
+                        return JSON.stringify(data);
+                    } else {
+                        return `Error fetching data for code ${code}`;
+                    }
+                } catch (error) {
+                    return `Error: ${error.message}`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

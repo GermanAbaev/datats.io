@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Input Fields</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        .input-field {
+            margin: 10px 0;
+        }
+
+        .remove-button {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Dynamic Input Fields</h1>
+        <div id="input-fields">
+            <div class="input-field">
+                <input type="text" name="field[]" placeholder="Enter a value">
+                <span class="remove-button" onclick="removeField(this)">-</span>
+            </div>
+        </div>
+        <button onclick="addField()">+</button>
+    </div>
+
+    <script>
+        function addField() {
+            const inputFields = document.getElementById("input-fields");
+            const newField = document.createElement("div");
+            newField.className = "input-field";
+            newField.innerHTML = `
+                <input type="text" name="field[]" placeholder="Enter a value">
+                <span class="remove-button" onclick="removeField(this)">-</span>
+            `;
+            inputFields.appendChild(newField);
+        }
+
+        function removeField(element) {
+            const inputFields = document.getElementById("input-fields");
+            inputFields.removeChild(element.parentElement);
+        }
+    </script>
+</body>
+</html>
